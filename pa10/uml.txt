@@ -1,0 +1,65 @@
+-------------------------------------
+|             Employee              |
+-------------------------------------
+| - name: string                    |
+| - email: string                   |
+| - role: string                    |
+| - group_id: int                   |
+-------------------------------------
+| + Employee()                      |
+| + Employee(name: string,          |
+|            email: string,         |
+|            role: string,          |
+|            group_id: int)         |
+| + get_name(): string              |
+| + get_email(): string             |
+| + get_role(): string              |
+| + get_group_id(): int             |
+| + set_name(name: string): Employee&|
+| + set_email(email: string):       |
+|   Employee&                       |
+| + set_role(role: string): Employee&|
+| + set_group_id(group_id: int):    |
+|   Employee&                       |
+| + operator<<(os: ostream&,        |
+|              e: Employee&):       |
+|              ostream&             |
+| + operator>>(is: istream&,        |
+|              e: Employee&):       |
+|              istream&             |
+| + operator==(e: Employee&): bool  |
+-------------------------------------
+                |
+                |
+                |
+                <>  (filled diamond)
+-------------------------------------
+|               Group               |
+-------------------------------------
+| - name: string                    |
+| - area: string                    |
+| - id: int                         |
+| - employees: vector<Employee>     |
+-------------------------------------
+| + Group()                         |
+| + Group(name: string,             |
+|         area: string,             |
+|         id: int)                  |
+| + get_name(): string              |
+| + get_area(): string              |
+| + get_id(): int                   |
+| + get_employees(): vector<Employee>|
+| + set_name(name: string): Group&  |
+| + set_area(area: string): Group&  |
+| + set_id(id: int): Group&         |
+| + set_employees(employees:        |
+|   vector<Employee>): Group&       |
+| + add_employee(employee: Employee)|
+|   : Group&                        |
+| + operator-(x: int): Group&       |
+| + operator+(g: Group&): Group     |
+| + operator<<(os: ostream&,        |
+|              g: Group&): ostream& |
+| + operator>>(is: istream&,        |
+|              g: Group&): istream& |
+-------------------------------------

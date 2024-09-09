@@ -1,0 +1,37 @@
+To convert the hexadecimal number 3A2 to binary, octal, and decimal representations, we will do the following steps:
+
+1. Convert the hexadecimal number 3A2 to binary.
+3 in hexadecimal = 0011 in binary
+A in hexadecimal = 1010 in binary
+2 in hexadecimal = 0010 in binary
+
+Therefore, the hexadecimal number 3A2 can be written as:
+3A2 (base 16) = 0011 1010 0010 (base 2)
+
+2. Convert the binary number 0011 1010 0010 to octal.
+Group the binary number into groups of three digits from right to left:
+001 110 100 010 (base 2)
+
+Convert each group of three binary digits to octal:
+001 (base 2) = 1 (base 8)
+110 (base 2) = 6 (base 8)
+100 (base 2) = 4 (base 8)
+010 (base 2) = 2 (base 8)
+
+Therefore, the binary number 0011 1010 0010 can be written as:
+0011 1010 0010 (base 2) = 1642 (base 8)
+
+3. Convert the hexadecimal number 3A2 to decimal.
+This can be done using the positional value method:
+3A2 (base 16) = 3*16^2 + 10*16^1 + 2*16^0
+= 3*256 + 10*16 + 2*1 (this is because A in hexadecimal is equivalent to 10 in decimal)
+= 768 + 160 + 2
+= 930 (base 10)
+
+Therefore, the hexadecimal number 3A2 can be written as:
+3A2 (base 16) = 930 (base 10)
+
+The hexadecimal number 3A2 can be represented as:
+Binary: 0011 1010 0010 (base 2) 
+Octal: 1642 (base 8)
+Decimal: 930 (base 10)

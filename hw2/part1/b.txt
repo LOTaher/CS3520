@@ -1,0 +1,79 @@
+Given two numbers in different formats (hex number: 1C01 & decimal number: 9010), the best way to compute the sum is to first convert the numbers to the same format:
+
+I will be converting the hexadecimal number 1C01 to a decimal number.
+
+To convert 1C01 (base 16) to a decimal number, we can use the following formula:
+1C01 (base 16) = 1*16^3 + 12*16^2 + 0*16^1 + 1*16^0 
+= 1*4096 + 12*256 + 0*16 + 1*1
+= 4096 + 3072 + 0 + 1
+= 7169 (base 10)
+
+Therefore, the sum of 1C01 (hex) and 9010 (dec) is 7169 + 9010 = 16179
+
+We can then find the product of 1C01 (hex) and 9010 (dec) by calculating 7169 * 9010 = 64592690
+
+The next step would be to convert back to hexacecimal format, however, the best (simplest) way to do so is by converting the decimal to binary and then converting the binary to hexadecimal instead like so:
+
+To get 16179 (base 10) to binary, we can use the following formula:
+16179 / 2 = 8089 remainder 1
+8089 / 2 = 4044 remainder 1
+4044 / 2 = 2022 remainder 0
+2022 / 2 = 1011 remainder 0
+1011 / 2 = 505 remainder 1
+505 / 2 = 252 remainder 1
+252 / 2 = 126 remainder 0
+126 / 2 = 63 remainder 0
+63 / 2 = 31 remainder 1
+31 / 2 = 15 remainder 1
+15 / 2 = 7 remainder 1
+7 / 2 = 3 remainder 1
+3 / 2 = 1 remainder 1
+1 / 2 = 0 remainder 1
+
+Therefore, 16179 (base 10) = 11111100110011 (base 2)
+
+To convert 11111100110011 (base 2) to hexadecimal, we can group the binary number into groups of 4 bits and convert each group to a hexadecimal digit:
+1111 1100 1100 11
+= F C C 3 (base 16)
+
+Therefore, 16179 (base 10) = FCC3 (base 16)
+
+To get the product of 1C01 (hex) and 9010 (dec) in hexadecimal, we can convert 64592690 (base 10) to binary and then to hexadecimal:
+
+To convert 64592690 (base 10) to binary, we can use the following formula:
+64592690 / 2 = 32296345 remainder 0
+32296345 / 2 = 16148172 remainder 1
+16148172 / 2 = 8074086 remainder 0
+8074086 / 2 = 4037043 remainder 0
+4037043 / 2 = 2018521 remainder 1
+2018521 / 2 = 1009260 remainder 1
+1009260 / 2 = 504630 remainder 0
+504630 / 2 = 252315 remainder 0
+252315 / 2 = 126157 remainder 1
+126157 / 2 = 63078 remainder 1
+63078 / 2 = 31539 remainder 0
+31539 / 2 = 15769 remainder 1
+15769 / 2 = 7884 remainder 1
+7884 / 2 = 3942 remainder 0
+3942 / 2 = 1971 remainder 0
+1971 / 2 = 985 remainder 1
+985 / 2 = 492 remainder 1
+492 / 2 = 246 remainder 0
+246 / 2 = 123 remainder 0
+123 / 2 = 61 remainder 1
+61 / 2 = 30 remainder 1
+30 / 2 = 15 remainder 0
+15 / 2 = 7 remainder 1
+7 / 2 = 3 remainder 1
+3 / 2 = 1 remainder 1
+1 / 2 = 0 remainder 1
+
+Therefore, 64592690 (base 10) = 11110110011001101100110010 (base 2)
+
+To convert 11110110011001101100110010 (base 2) to hexadecimal, we can group the binary number into groups of 4 bits and convert each group to a hexadecimal digit:
+1111 0110 0110 0110 1100 1100 10
+= F 6 6 6 C C 2 (base 16)
+
+The product of 1C01 (base 16) and 9010 (base 10) in hexadecimal is F666CC2 (base 16)
+
+Therefore, the sum of 1C01 (base 16) and 9010 (base 10) is 16179 and the product of 1C01 (base 16) and 9010 (base 10) is F666CC2 (base 16)

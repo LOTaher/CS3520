@@ -1,0 +1,4 @@
+laith,1005,la
+aaryan,1036,la
+test,1000,nj
+test2,200,nj

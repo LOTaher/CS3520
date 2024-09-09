@@ -1,0 +1,89 @@
+Input Reading:
+
+    Read the student data from a CSV file and parse the data into appropriate data structures.
+
+    Steps:
+        Open the CSV file.
+        Parse each line into a Student struct.
+        Store the Student struct in a vector.
+
+    Code Implementation:
+
+        Function: read_students_results(const string &file_name, vector<Student> &students)
+            Open the file.
+            Parse each line and fill the Student struct fields.
+            Add the Student struct to the students vector.
+
+Data Structures:
+
+    Student Struct:
+        Fields:
+        username
+        programming
+        debugging
+        algorithm
+        do_not_work_with
+        prefer_to_work_with
+    Justification: Encapsulates all the necessary information needed for a student in a single object.
+
+    Vector of Students:
+        vector<Student> students
+        Justification: Stores and manages student data dynamically, allowing for the addition and removal of students.
+
+    Map of int to vector Student:
+        map<int, vector<Student>> teams
+        Justification: Stores and manages each team (by #) and all the students associated with that team.
+
+    Vector of Student:
+        vector<Student> students_with_preferred_students
+        Justification: Allows easy access to students with preferences.
+
+    Vector of Strings:
+        vector<string> team_not_work_with
+        Justification: Stores the usernames of students a student does not want to work with.
+
+    Vector of Student:
+        vector<Student> current_team
+        Justification: Stores the current team members.
+
+    Vector of Student:
+        vector<Student> students_not_in_team
+        Justification: Stores students who are not in a team yet.
+
+    Map of int to vector Students:
+        map<int, vector<Student>> programming_students
+        Justification: Efficiently stores and manages each programming level and all the students associated with that level.
+
+Forming Teams:
+
+    Form teams based on user-specified criteria (either by student preferences or by balancing skills).
+    Steps:
+        Prompt the user for the team size.
+        Prompt the user for the team formation strategy (preferences or skills).
+        Implement a function to form teams based on the chosen strategy.
+        Use a greedy approach to assign students to teams while honoring constraints.
+
+    Code Implementation:
+
+        Function: create_teams(vector<Student> &students, int team_size, map<int, vector<Student>> &teams, string preference)
+            Preference "L":
+                Categorize students by skill levels, specifically, only keep account of the programming skill.
+                Use a priority map to determine the order of skill levels added to teams.
+                Form teams ensuring each team is skill-balanced.
+            Preference "P":
+                Map students to their preferred teammates.
+                Form teams ensuring each team honors student preferences as much as possible.
+
+Score Calculation:
+
+    Calculate and display each team's score based on their skills.
+    Steps:
+        Iterate 
+        Sum up their skills.
+        Display the scores and team composition neatly.
+
+    Code Implementation:
+
+        print_teams(map<int, vector<Student>> &teams)
+            Calculate scores for programming, debugging, and design.
+            Print team composition and scores.

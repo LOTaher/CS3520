@@ -1,0 +1,55 @@
+1. Placing an Order
+
+Customer        Dealership        Order           Vehicle
+   |                |               |                |
+   | place_order()  |               |                |
+   |--------------->|               |                |
+   |                | createOrder() |                |
+   |                |-------------->|                |
+   |                |               |                |
+   |                |               | get_vehicle()  |
+   |                |               |--------------->|
+   |                |               | return vehicle |
+   |                |               |<---------------|
+   |                |               | get_customer() |
+   |                |               |--------------->|
+   |                |               | return customer|
+   |                |               |<---------------|
+   |                |               | get_delivery() |
+   |                |               |--------------->|
+   |                |               | return delivery|
+   |                |               |<---------------|
+   |                | order_created |                |
+   |<---------------|               |                |
+
+
+2. Adding a vehicle to your Favorites
+
+Customer         FavoriteList          Vehicle
+   |                |                     |
+   | add_vehicle(vehicle)                 |
+   |------------------------------------->|
+   |                |                     |
+   |                | add_vehicle(vehicle)|
+   |                |-------------------->|
+   |                |                     |
+   |                |   vehicle_added     |
+   |<-------------------------------------|
+   | vehicle_added  |                     |
+   |<---------------|                     |
+
+
+3. Publishing an Inventory
+
+Dealership         Inventory              Vehicle
+   |                  |                     |
+   | add_vehicle(vehicle)                   |
+   |--------------------------------------->|
+   |                  |                     |
+   |                  | add_vehicle(vehicle)|
+   |                  |-------------------->|
+   |                  |                     |
+   |                  | vehicle_added       |
+   |<-----------------|<--------------------|
+   | inventory_updated|                     |
+   |<-----------------|                     |

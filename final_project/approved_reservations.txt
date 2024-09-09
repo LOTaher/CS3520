@@ -1,0 +1,16 @@
+Event Name: Aaryans Birthday
+Start Time: 2024-06-25 22:00
+End Time: 2024-06-25 24:00
+Is public: yes
+Number of Guests: 2
+Organizer: aaryan
+Layout: Wedding Style
+Price of Event: 30
+Ticket Price: 15
+Organizer Type: Resident
+Open to Residents: yes
+Open to Non-Residents: no
+Approved: no
+Attendees: 
+Waitlist: 
+----------------------------------------

@@ -1,0 +1,61 @@
+Airline Reservation System Pseudocode
+
+Main function runs:
+- Initialize a plane and its seating chart of 72 seats in 12 rows.
+- Load any data in the saved manifest by populating the passengers into the plane and the working mainifest (since that is the current manifest).
+- Display welcome message and sign in menu with two options: passenger sign in and employee sign in (and a quit option).
+- If passenger sign in is selected, retrieve the name of the passenger 
+ - Once the name is inputted by the user, display the passenger menu (look below)
+- If employee sign in is selected, retrieve the name and password of the employee account and validate the credentials based on a username and password listed in the credentials.txt file.
+ - If the credentials are valid, display the employee menu (look below)
+- If the quit option is selected, save the manifest to the saved_manifest file and end the program
+
+Passenger menu function runs:
+- Display the passenger menu with the following options:
+ - Look at the seating chart
+  - In the visual, seats with an "X" are taken and seats with an "O" are available.
+ - Choose a seat automatically
+  - If the passenger already has a seat, they will be prompted to cancel their seat first.
+  - The seat change is written in the manifest.
+ - Choose a seat manually
+  - If the passenger already has a seat, they will be prompted to cancel their seat first.
+  - The seat change is written in the manifest.
+ - Change or cancel the passenger's seat
+  - If the passenger does not have a seat, they will be prompted to choose a seat first.
+  - If the passenger wants to change their seat, they must select whether they want to upgrade or downgrade their seat level. Based on what's chosen, there will be seat options for them to choose from.
+  - If the passenger wants to cancel their seat, they must provide their name and their seat number beforehand.
+  - The seat change is written in the manifest.
+ - Print the passenger's boarding pass
+  - If the passenger has a seat, their boarding pass will be printed with their name and seat number.
+  - If the passenger does not have a seat, they will be prompted to choose a seat first.
+ - Quit
+  - Go back to the sign in menu.
+
+Employee menu function runs:
+- Display the employee menu with the following options:
+ - Look at the seating chart
+  - In the visual, seats with an "X" are taken and seats with an "O" are available.
+ - Print the passenger manifest
+  - Display the list of passengers with their names, seat numbers, and seat levels.
+  - The user has the option to also reorder the manifest in these way:
+   - By seat number (ascending)
+   - By seat number (descending)
+   - By name (A-Z)
+   - By name (Z-A)
+   - By class (first, business, economy)
+ - Load previous seat assignment and passenger manifest
+  - Load the previous seat assignment from the saved_manifest.txt file and display the seating chart.
+   - If the file is empty, display a message saying that there is no saved data to load.
+ - Save the current seat assignment and passenger manifest
+  - Save the current passenger manifest (working_manifest) to the saved_manifest.txt file.
+ - Re-assign or cancel a seat assignment
+  - Print a custom employee menu to:
+   - Re-assign a seat assignment
+    - The employee will be prompted to enter the passenger's name and the seat number they want to assign.
+    - The seat change is written in the manifest.
+   - Cancel a seat assignment
+    - The employee will be prompted to enter the passenger's name and the seat number they want to cancel.
+    - The seat change is written in the manifest.
+ - Quit
+  - Go back to the sign in menu.
+

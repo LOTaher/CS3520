@@ -1,0 +1,29 @@
+Laith Taher (5/9/2024)
+This text file shows the (12 bits) 2's compliment binary representation for -13, 56, -1, -2048, 2048
+
+To make the 12 bits representation, we need to convert the decimal number to binary and then add zeros to the left to make it 12 bits.
+The digits need to be inverted and added 1 to if the number is negative.
+
+-13:
+ - 13 in binary is 1101.
+ - To make it 12 bits: 000000001101.
+ - Inverting the digits: 111111110010.
+ - Adding 1: 111111110011.
+
+56:
+ - 56 in binary is 111000.
+ - To make it 12 bits: 000000111000.
+
+-1:
+ - 1 in binary is 1.
+ - To make it 12 bits: 000000000001.
+ - Inverting the digits: 111111111110.
+ - Adding 1: 111111111111.
+
+-2048:
+ - 2048 in binary normally would be 100000000000 for 12-bit.
+ - Therefore, the two's complement representation is simply: 100000000000.
+
+2048:
+ - In a 12-bit two's complement system, 2048 cannot be represented because it exceeds the maximum possible positive value of 2047.
+ - Trying to represent 2048 would result in an "overflow".
